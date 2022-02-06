@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C31B98FB27AFB48F0015C5F4 /* CharacterListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31B98FA27AFB48F0015C5F4 /* CharacterListViewModelTests.swift */; };
+		C31B98FD27AFB4D90015C5F4 /* MockCharacterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31B98FC27AFB4D90015C5F4 /* MockCharacterUseCase.swift */; };
+		C31B990227AFB5230015C5F4 /* MockCharacterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31B990027AFB5230015C5F4 /* MockCharacterData.swift */; };
+		C31B990327AFB5230015C5F4 /* MockCharacterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31B990127AFB5230015C5F4 /* MockCharacterRepository.swift */; };
+		C31B990527AFB5490015C5F4 /* CharacterUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31B990427AFB5490015C5F4 /* CharacterUseCaseTests.swift */; };
+		C31B990727AFB7100015C5F4 /* CharacterDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31B990627AFB7100015C5F4 /* CharacterDetailViewModelTests.swift */; };
 		C3B1E65F27ADAADF00408676 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B1E65E27ADAADF00408676 /* AppDelegate.swift */; };
 		C3B1E66827ADAAE000408676 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3B1E66727ADAAE000408676 /* Assets.xcassets */; };
 		C3B1E66B27ADAAE000408676 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3B1E66927ADAAE000408676 /* LaunchScreen.storyboard */; };
@@ -42,7 +48,24 @@
 		C3DF7FA927AEF9D800B6CEB1 /* CharacterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DF7FA827AEF9D700B6CEB1 /* CharacterDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C31B98F227AFB3E30015C5F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3B1E65327ADAADE00408676 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3B1E65A27ADAADE00408676;
+			remoteInfo = "Rick-Morty-App";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		C31B98EE27AFB3E30015C5F4 /* Rick-Morty-AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rick-Morty-AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C31B98FA27AFB48F0015C5F4 /* CharacterListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModelTests.swift; sourceTree = "<group>"; };
+		C31B98FC27AFB4D90015C5F4 /* MockCharacterUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockCharacterUseCase.swift; sourceTree = "<group>"; };
+		C31B990027AFB5230015C5F4 /* MockCharacterData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockCharacterData.swift; sourceTree = "<group>"; };
+		C31B990127AFB5230015C5F4 /* MockCharacterRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockCharacterRepository.swift; sourceTree = "<group>"; };
+		C31B990427AFB5490015C5F4 /* CharacterUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterUseCaseTests.swift; sourceTree = "<group>"; };
+		C31B990627AFB7100015C5F4 /* CharacterDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewModelTests.swift; sourceTree = "<group>"; };
 		C3B1E65B27ADAADF00408676 /* Rick-Morty-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rick-Morty-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3B1E65E27ADAADF00408676 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3B1E66727ADAAE000408676 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -81,6 +104,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C31B98EB27AFB3E30015C5F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C3B1E65827ADAADE00408676 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -91,10 +121,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C31B98EF27AFB3E30015C5F4 /* Rick-Morty-AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				C31B98F827AFB4660015C5F4 /* Domain */,
+				C31B98F727AFB45D0015C5F4 /* ViewModel */,
+			);
+			path = "Rick-Morty-AppTests";
+			sourceTree = "<group>";
+		};
+		C31B98F727AFB45D0015C5F4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C31B98F927AFB4760015C5F4 /* Mocks */,
+				C31B98FA27AFB48F0015C5F4 /* CharacterListViewModelTests.swift */,
+				C31B990627AFB7100015C5F4 /* CharacterDetailViewModelTests.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C31B98F827AFB4660015C5F4 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				C31B98FF27AFB5140015C5F4 /* UseCase */,
+				C31B98FE27AFB50C0015C5F4 /* Mocks */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		C31B98F927AFB4760015C5F4 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				C31B98FC27AFB4D90015C5F4 /* MockCharacterUseCase.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		C31B98FE27AFB50C0015C5F4 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				C31B990027AFB5230015C5F4 /* MockCharacterData.swift */,
+				C31B990127AFB5230015C5F4 /* MockCharacterRepository.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		C31B98FF27AFB5140015C5F4 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				C31B990427AFB5490015C5F4 /* CharacterUseCaseTests.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
 		C3B1E65227ADAADE00408676 = {
 			isa = PBXGroup;
 			children = (
 				C3B1E65D27ADAADF00408676 /* Rick-Morty-App */,
+				C31B98EF27AFB3E30015C5F4 /* Rick-Morty-AppTests */,
 				C3B1E65C27ADAADF00408676 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				C3B1E65B27ADAADF00408676 /* Rick-Morty-App.app */,
+				C31B98EE27AFB3E30015C5F4 /* Rick-Morty-AppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -351,6 +436,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C31B98ED27AFB3E30015C5F4 /* Rick-Morty-AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C31B98F427AFB3E30015C5F4 /* Build configuration list for PBXNativeTarget "Rick-Morty-AppTests" */;
+			buildPhases = (
+				C31B98EA27AFB3E30015C5F4 /* Sources */,
+				C31B98EB27AFB3E30015C5F4 /* Frameworks */,
+				C31B98EC27AFB3E30015C5F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C31B98F327AFB3E30015C5F4 /* PBXTargetDependency */,
+			);
+			name = "Rick-Morty-AppTests";
+			productName = "Rick-Morty-AppTests";
+			productReference = C31B98EE27AFB3E30015C5F4 /* Rick-Morty-AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C3B1E65A27ADAADE00408676 /* Rick-Morty-App */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3B1E66F27ADAAE000408676 /* Build configuration list for PBXNativeTarget "Rick-Morty-App" */;
@@ -379,6 +482,10 @@
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
+					C31B98ED27AFB3E30015C5F4 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = C3B1E65A27ADAADE00408676;
+					};
 					C3B1E65A27ADAADE00408676 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
@@ -398,11 +505,19 @@
 			projectRoot = "";
 			targets = (
 				C3B1E65A27ADAADE00408676 /* Rick-Morty-App */,
+				C31B98ED27AFB3E30015C5F4 /* Rick-Morty-AppTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C31B98EC27AFB3E30015C5F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C3B1E65927ADAADE00408676 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -440,6 +555,19 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C31B98EA27AFB3E30015C5F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C31B990527AFB5490015C5F4 /* CharacterUseCaseTests.swift in Sources */,
+				C31B990727AFB7100015C5F4 /* CharacterDetailViewModelTests.swift in Sources */,
+				C31B990227AFB5230015C5F4 /* MockCharacterData.swift in Sources */,
+				C31B98FB27AFB48F0015C5F4 /* CharacterListViewModelTests.swift in Sources */,
+				C31B98FD27AFB4D90015C5F4 /* MockCharacterUseCase.swift in Sources */,
+				C31B990327AFB5230015C5F4 /* MockCharacterRepository.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C3B1E65727ADAADE00408676 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -477,6 +605,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C31B98F327AFB3E30015C5F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C3B1E65A27ADAADE00408676 /* Rick-Morty-App */;
+			targetProxy = C31B98F227AFB3E30015C5F4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		C3B1E66927ADAAE000408676 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -489,6 +625,40 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C31B98F527AFB3E30015C5F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.syed.Rick-Morty-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rick-Morty-App.app/Rick-Morty-App";
+			};
+			name = Debug;
+		};
+		C31B98F627AFB3E30015C5F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.syed.Rick-Morty-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rick-Morty-App.app/Rick-Morty-App";
+			};
+			name = Release;
+		};
 		C3B1E66D27ADAAE000408676 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -662,6 +832,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C31B98F427AFB3E30015C5F4 /* Build configuration list for PBXNativeTarget "Rick-Morty-AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C31B98F527AFB3E30015C5F4 /* Debug */,
+				C31B98F627AFB3E30015C5F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C3B1E65627ADAADE00408676 /* Build configuration list for PBXProject "Rick-Morty-App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -9,7 +9,7 @@ import Foundation
 struct API {
     static let characterListEndPoint = "https://rickandmortyapi.com/api"
 }
-    enum RickMortyError: Error {
+    enum RickMortyError: LocalizedError {
         case characterNotFound
         case apiError
         case other(Error)
