@@ -17,12 +17,10 @@ class CharacterDetailViewModelTests: XCTestCase {
         let viewModel = CharacterDetailViewModel(character: mockCharacter)
         XCTAssertEqual(viewModel.name, "Rick Sanchez")
     }
-   
     func test_characterDetail_status_is_Valid() {
         let viewModel = CharacterDetailViewModel(character: mockCharacter)
         XCTAssertEqual(viewModel.status, "Alive")
     }
-   
     func test_characterDetail_species_is_Valid() {
         let viewModel = CharacterDetailViewModel(character: mockCharacter)
         XCTAssertEqual(viewModel.species, "Human")

@@ -10,9 +10,10 @@ import UIKit
 class CharacterListViewController: UITableViewController {
     // MARK: Variables
     let viewModel: CharacterListViewModel
-    lazy var searchBar:UISearchBar = UISearchBar()
+    lazy var searchBar: UISearchBar = UISearchBar()
     var isSearchActive: Bool = false
     var itemSelected: ((Character) -> Void)?
+
     init(viewModel: CharacterListViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -37,7 +38,7 @@ class CharacterListViewController: UITableViewController {
         tableView.refreshControl?.addTarget(self, action: #selector(didPullToRefresh), for: .valueChanged)
         tableView.refreshControl?.beginRefreshing()
     }
-    
+
     private func setupSearchBar() {
         searchBar.searchBarStyle = UISearchBar.Style.default
            searchBar.placeholder = " Search..."
@@ -85,7 +86,7 @@ extension CharacterListViewController {
         updateUI()
         return viewModel.numberOfRows
     }
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath) as CharacterTableViewCell
         cell.configure(with: viewModel.row(at: indexPath.row))
@@ -95,18 +96,15 @@ extension CharacterListViewController {
 
 // MARK: - TableView Delegate
 extension CharacterListViewController {
-    
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         itemSelected?(viewModel.getSelectedItem(at: indexPath.row))
-        
-    }
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        50
+
     }
 }
 
-//MARK: - SearchBar Delegate
+// MARK: - SearchBar Delegate
 
 extension CharacterListViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {

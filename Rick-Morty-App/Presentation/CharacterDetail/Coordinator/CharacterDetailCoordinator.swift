@@ -26,7 +26,7 @@ final class CharacterDetailCoordinator: BaseCoordinator {
     // MARK: - Coordinator
     /// Initiates the CharacterDetailView Controller and Display it
     override func start() {
-        let recipeVC = dependencies.makeCharacterDetailViewController()
-        parent?.pushViewController(recipeVC, animated: true)
+        let detailVC = dependencies.makeCharacterDetailViewController()
+        parent?.pushViewController(detailVC, animated: true)
     }
 }

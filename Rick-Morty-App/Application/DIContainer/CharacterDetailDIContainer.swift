@@ -7,11 +7,10 @@
 import UIKit
 final class CharacterDetailDIContainer: CharacterDetailCoordinatorDependencies {
     public let character: Character
-    
     init(character: Character) {
         self.character = character
     }
-    // MARK: - Recipe Detail
+    // MARK: - Character Detail
     /// Get  Character Detail View Model
     /// - Returns:  CharacterDetailViewModel
     func makeCharacterDetailViewModel() -> CharacterDetailViewModel {
@@ -21,7 +20,6 @@ final class CharacterDetailDIContainer: CharacterDetailCoordinatorDependencies {
     /// - Returns:  CharacterListViewController
     func makeCharacterDetailViewController() -> CharacterDetailViewController {
         CharacterDetailViewController(viewModel: makeCharacterDetailViewModel())
-        
     }
     // MARK: - Coordinators
     /// Get  CharacterList Coordinator

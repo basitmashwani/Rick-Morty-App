@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct CharacterCellItemViewModel: Equatable {
+struct CharacterCellItemViewModel {
     let name: String
     let episodeCount: String
     let imageURL: String

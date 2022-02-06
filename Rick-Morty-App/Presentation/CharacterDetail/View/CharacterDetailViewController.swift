@@ -15,8 +15,8 @@ class CharacterDetailViewController: UIViewController {
     @IBOutlet weak var lblGender: UILabel!
     @IBOutlet weak var lblStatus: UILabel!
     @IBOutlet weak var lblLocation: UILabel!
-
     let viewModel: CharacterDetailViewModel
+
     init(viewModel: CharacterDetailViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -28,7 +28,7 @@ class CharacterDetailViewController: UIViewController {
         super.viewDidLoad()
         bind(to: viewModel)
     }
-    
+
     private func bind(to viewModel: CharacterDetailViewModel) {
         lblName.text = viewModel.name
         lblGender.text = viewModel.gender

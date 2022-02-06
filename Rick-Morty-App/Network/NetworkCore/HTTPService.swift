@@ -17,5 +17,4 @@ public typealias Parameters = [String: Any]
 protocol HTTPService {
     func request(_ method: HTTPMethod, path: RickMortyApi, parameters: [String: Any]?,
                  queryItems: [URLQueryItem]?) -> RickMortyRequest
-
 }

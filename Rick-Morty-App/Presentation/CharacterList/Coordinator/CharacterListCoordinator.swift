@@ -22,18 +22,17 @@ final class CharacterListCoordinator: BaseCoordinator {
     init(dependencies: CharacterListCoordinatorDependencies, parent: UINavigationController) {
         self.dependencies = dependencies
         self.parent = parent
-      //  dependencies.did
     }
     // MARK: - Coordinator
     /// Initiates the CharacterListView Controller and Display it
     override func start() {
-        let recipeVC = dependencies.makeCharacterListViewController()
-        recipeVC.itemSelected = { character in
+        let characterListVC = dependencies.makeCharacterListViewController()
+        characterListVC.itemSelected = { character in
             self.navigateToDetailScreen(with: character)
         }
-        parent?.pushViewController(recipeVC, animated: true)
+        parent?.pushViewController(characterListVC, animated: true)
     }
-    
+
     private func navigateToDetailScreen(with character: Character) {
         let characterDetailDIContainer = dependencies.makeCharacterDetailDIContainer(character: character)
         let coordinator = characterDetailDIContainer.characterDetailCoordinator(navigation: parent!)

@@ -14,7 +14,6 @@ protocol CharacterDetailViewModelOutput {
     var status: String { get }
     var location: String { get }
     var imageURL: String { get }
-
 }
 
 struct CharacterDetailViewModel: CharacterDetailViewModelOutput {
@@ -25,7 +24,7 @@ struct CharacterDetailViewModel: CharacterDetailViewModelOutput {
         self.character = character
     }
     // MARK: - Output
-    
+
     var name: String { character.name }
     var species: String { character.species }
     var gender: String { character.gender }

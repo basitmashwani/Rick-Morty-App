@@ -69,7 +69,7 @@ final class CharacterListViewModel: CharacterListViewModelProtocol {
     func row(at index: Int) -> CharacterCellItemViewModel {
         CharacterCellItemViewModel(item: filteredCharacters[index])
     }
-    
+
     func filter(by value: String) {
         if value.isEmpty {
             filteredCharacters = characters
@@ -77,7 +77,7 @@ final class CharacterListViewModel: CharacterListViewModelProtocol {
         filteredCharacters = characters.filter { $0.name.contains(value) }
         }
     }
-    
+
     func getSelectedItem(at index: Int) -> Character {
         filteredCharacters[index]
     }

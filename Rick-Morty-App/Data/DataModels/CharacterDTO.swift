@@ -38,7 +38,7 @@ struct Location: Codable {
 // MARK: - Extension
 extension CharacterDTO {
     /// Method that changes the DTO to Domain Model
-    /// - Returns: Recipe Domain Model
+    /// - Returns: Character Domain Model
     func toDomain() -> Character {
         .init(characterId: characterId, name: name, status: status, species: species,
               gender: gender, imgURL: imgURL, lastLocation: location.name,

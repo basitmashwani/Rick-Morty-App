@@ -24,9 +24,7 @@ class CharacterListViewModelTest: XCTestCase {
                                  Character(characterId: 5, name: "Jery Smith",
                                            status: "Alive", species: "Human", gender: "Male", imgURL: "",
                                            lastLocation: "Citadel of Ricks", episodeCount: 90)]
-                                 
-    
-    
+
     func testViewDidLoad_whenCharactersAreSuccessfullyLoaded_shouldHaveLoadedViewState() {
         // given
         var currentState: CharacterListViewState?
@@ -41,7 +39,7 @@ class CharacterListViewModelTest: XCTestCase {
         // then
         XCTAssertEqual(currentState, .loaded)
     }
-    
+
     func testViewDidLoad_whenCharacterAreFailedToLoad_shouldHaveFailedViewState() {
         // given
         var currentState: CharacterListViewState?
@@ -56,7 +54,7 @@ class CharacterListViewModelTest: XCTestCase {
         // then
         XCTAssertEqual(currentState, .failed("Ops Something went wrong. Please try later!"))
     }
-    
+
     func test_search_valid_character() {
         let useCaseMock = MockCharacterUseCase()
         useCaseMock.resultLoadCharacters = .success(Self.mockCharacters)
@@ -67,7 +65,7 @@ class CharacterListViewModelTest: XCTestCase {
         // then
         XCTAssertEqual(viewModel.numberOfRows, 1)
     }
-    
+
     func test_search_invalid_character() {
         let useCaseMock = MockCharacterUseCase()
         useCaseMock.resultLoadCharacters = .success(Self.mockCharacters)
@@ -79,4 +77,3 @@ class CharacterListViewModelTest: XCTestCase {
         XCTAssertEqual(viewModel.numberOfRows, 0)
     }
 }
-
