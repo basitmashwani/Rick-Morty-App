@@ -56,5 +56,27 @@ class CharacterListViewModelTest: XCTestCase {
         // then
         XCTAssertEqual(currentState, .failed("Ops Something went wrong. Please try later!"))
     }
+    
+    func test_search_valid_character() {
+        let useCaseMock = MockCharacterUseCase()
+        useCaseMock.resultLoadCharacters = .success(Self.mockCharacters)
+        let viewModel = CharacterListViewModel(useCase: useCaseMock)
+        // when
+        viewModel.viewDidLoad()
+        viewModel.filter(by: "Morty Smity")
+        // then
+        XCTAssertEqual(viewModel.numberOfRows, 1)
+    }
+    
+    func test_search_invalid_character() {
+        let useCaseMock = MockCharacterUseCase()
+        useCaseMock.resultLoadCharacters = .success(Self.mockCharacters)
+        let viewModel = CharacterListViewModel(useCase: useCaseMock)
+        // when
+        viewModel.viewDidLoad()
+        viewModel.filter(by: "Smity198")
+        // then
+        XCTAssertEqual(viewModel.numberOfRows, 0)
+    }
 }
 

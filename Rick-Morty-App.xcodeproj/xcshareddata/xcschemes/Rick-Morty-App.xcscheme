@@ -26,13 +26,14 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C3DF7FAD27AF11C000B6CEB1"
+               BlueprintIdentifier = "C31B98ED27AFB3E30015C5F4"
                BuildableName = "Rick-Morty-AppTests.xctest"
                BlueprintName = "Rick-Morty-AppTests"
                ReferencedContainer = "container:Rick-Morty-App.xcodeproj">
